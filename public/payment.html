@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Assignment Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID"></script> <!-- Replace with your PayPal client ID -->
+</head>
+<body class="payment-page">
+    <header class="payment-header">
+        <nav class="payment-nav">
+            <div class="logo">Assignment Hub</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="submit.html">Assignment</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="payment.html">Payment</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="payment" class="section payment-section">
+        <h2 class="section-title">Select Payment Method</h2>
+        <div class="payment-methods">
+            <div class="payment-method" onclick="showEsewaQR()">
+                <img src="images/esewa.jpg" alt="eSewa" class="payment-logo">
+                <p>eSewa</p>
+            </div>
+            <div class="payment-method" onclick="showPayPalQR()">
+                <img src="images/paypal.jpeg" alt="PayPal" class="payment-logo">
+                <p>PayPal</p>
+            </div>
+        </div>
+        <div id="qr-container" style="display: none;">
+            <img id="qr-code" src="" alt="QR Code" class="qr-code">
+        </div>
+    </section>
+
+    <footer class="payment-footer">
+        <p>&copy; 2024 Assignment Hub. All rights reserved.</p>
+    </footer>
+
+    <script src="payment.js"></script>
+</body>
+</html>
